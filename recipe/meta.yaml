@@ -38,6 +38,9 @@ requirements:
     - dbus
     - glib
     - gobject-introspection
+  run:
+    # this line can be removed when dbus gets exported properly
+    - {{ pin_compatible('dbus') }}
 
 test:
   commands:
