@@ -3,7 +3,7 @@ About at-spi2-atk
 
 Home: http://www.gtk.org/
 
-Package license: LGPL-2.1
+Package license: LGPL-2.1-or-later
 
 Feedstock license: BSD-3-Clause
 
@@ -22,14 +22,7 @@ Current build status
 ====================
 
 
-<table><tr>
-    <td>Drone</td>
-    <td>
-      <a href="https://cloud.drone.io/conda-forge/at-spi2-atk-feedstock">
-        <img alt="linux" src="https://img.shields.io/drone/build/conda-forge/at-spi2-atk-feedstock/master.svg?label=Linux">
-      </a>
-    </td>
-  </tr>
+<table>
     
   <tr>
     <td>Azure</td>
