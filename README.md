@@ -3,9 +3,9 @@ About at-spi2-atk
 
 Home: http://www.gtk.org/
 
-Package license: LGPL-2.1
+Package license: LGPL-2.1-or-later
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: bridge for AT-SPI and ATK accessibility technologies
 
@@ -40,6 +40,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=9292&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/at-spi2-atk-feedstock?branchName=master&jobName=linux&configuration=linux_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=9292&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/at-spi2-atk-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -163,4 +170,5 @@ Feedstock Maintainers
 
 * [@ryanvolz](https://github.com/ryanvolz/)
 * [@stuarteberg](https://github.com/stuarteberg/)
+* [@tschoonj](https://github.com/tschoonj/)
 
