@@ -2,21 +2,20 @@
 # This file is licensed under a 3-clause BSD license; see LICENSE.txt.
 
 {% set name = "at-spi2-atk" %}
-{% set version = "2.34.2" %}
+{% set version = "2.38.0" %}
 {% set version_majmin = '.'.join(version.split('.', 2)[:2]) %}
-{% set sha256 = "901323cee0eef05c01ec4dee06c701aeeca81a314a7d60216fa363005e27f4f0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: http://ftp.gnome.org/pub/gnome/sources/{{ name }}/{{ version_majmin }}/{{ name }}-{{ version }}.tar.xz
-  sha256: {{ sha256 }}
+  url: https://download.gnome.org/sources/{{ name }}/{{ version_majmin }}/{{ name }}-{{ version }}.tar.xz
+  sha256: cfa008a5af822b36ae6287f18182c40c91dd699c55faa38605881ed175ca464f
 
 build:
   number: 0
-  skip: True  # [win]
+  skip: True  # [not linux]
   run_exports:
     - {{ pin_subpackage('at-spi2-atk', max_pin='x') }}
 
@@ -25,13 +24,13 @@ requirements:
     - meson
     - ninja
     - pkg-config
-    - pthread-stubs  # [linux]
+    - pthread-stubs
     - {{ compiler('c') }}
-    - {{ cdt('libx11-devel') }}  # [linux]
-    - {{ cdt('libxi-devel') }}  # [linux]
-    - {{ cdt('libxfixes-devel') }}  # [linux]
-    - {{ cdt('libxtst-devel') }}  # [linux]
-    - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
+    - {{ cdt('libx11-devel') }}
+    - {{ cdt('libxi-devel') }}
+    - {{ cdt('libxfixes-devel') }}
+    - {{ cdt('libxtst-devel') }}
+    - {{ cdt('xorg-x11-proto-devel') }}
   host:
     - at-spi2-core
     - atk
@@ -44,8 +43,8 @@ requirements:
 
 test:
   commands:
-    - test -f $PREFIX/include/at-spi2-atk/2.0/atk-bridge.h  # [unix]
-    - test -f $PREFIX/lib/libatk-bridge-2.0${SHLIB_EXT}  # [unix]
+    - test -f $PREFIX/include/at-spi2-atk/2.0/atk-bridge.h
+    - test -f $PREFIX/lib/libatk-bridge-2.0${SHLIB_EXT}
 
 about:
   home: http://www.gtk.org/
