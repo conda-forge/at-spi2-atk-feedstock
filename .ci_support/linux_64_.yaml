@@ -2,6 +2,8 @@ c_compiler:
 - gcc
 c_compiler_version:
 - '7'
+cdt_name:
+- cos6
 channel_sources:
 - conda-forge,defaults
 channel_targets:
@@ -11,7 +13,7 @@ dbus:
 docker_image:
 - condaforge/linux-anvil-comp7
 glib:
-- '2.58'
+- 2.64.6
 pin_run_as_build:
   dbus:
     max_pin: x
