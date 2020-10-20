@@ -5,9 +5,11 @@ Home: http://www.gtk.org/
 
 Package license: LGPL-2.1-or-later
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/at-spi2-atk-feedstock/blob/master/LICENSE.txt)
 
 Summary: bridge for AT-SPI and ATK accessibility technologies
+
+Development: https://gitlab.gnome.org/GNOME/at-spi2-atk
 
 This package includes libatk-bridge, a library that bridges ATK to the new
 D-Bus based AT-SPI, as well as a corresponding module for gtk+ 2.x. Gtk+ 3.x
