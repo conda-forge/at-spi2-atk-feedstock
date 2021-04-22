@@ -14,7 +14,7 @@ source:
   sha256: cfa008a5af822b36ae6287f18182c40c91dd699c55faa38605881ed175ca464f
 
 build:
-  number: 2
+  number: 3
   skip: True  # [not linux]
   run_exports:
     - {{ pin_subpackage('at-spi2-atk', max_pin='x') }}
@@ -26,20 +26,12 @@ requirements:
     - pkg-config
     - pthread-stubs
     - {{ compiler('c') }}
-    - {{ cdt('libx11-devel') }}
-    - {{ cdt('libxi-devel') }}
-    - {{ cdt('libxfixes-devel') }}
-    - {{ cdt('libxtst-devel') }}
-    - {{ cdt('xorg-x11-proto-devel') }}
   host:
     - at-spi2-core
     - atk
     - dbus
     - glib
     - gobject-introspection
-  run:
-    # this line can be removed when dbus gets exported properly
-    - {{ pin_compatible('dbus') }}
 
 test:
   commands:

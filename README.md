@@ -80,6 +80,7 @@ Installing `at-spi2-atk` from the `conda-forge` channel can be achieved by addin
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `at-spi2-atk` can be installed with:
